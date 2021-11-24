@@ -1,0 +1,40 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">User Name</th>
+      <th scope="col">Role</th>
+      <th scope="col">Address</th>
+      <th scope="col">Email</th>
+      <th scope="col">Skills</th>
+      <th scope="col">Options</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of usersList; let i=index;">
+      <th scope="row">{{ i }}</th>
+      <td>
+        {{ user.name }}
+      </td>
+      <td>
+        {{ user.userName }}
+      </td>
+      <td>
+        {{ user.role }}
+      </td>
+      <td>
+        {{ user.address }}
+      </td>
+      <td>
+        {{ user.email }}
+      </td>
+      <td>
+        <span *ngFor="let skill of user.skillSet;" style="background-color: #cdcdcd; padding: 2px 5px; margin-right: 5px; border-radius: 3px; font-size: 12px; display: inline-block; line-height: 17px; font-weight: 600;">{{ skill.skillName }}</span>
+      </td>
+      <td>
+          <a [routerLink]="user.id"><span class="material-icons">edit</span></a>
+      </td>
+    </tr>
+  </tbody>
+</table>

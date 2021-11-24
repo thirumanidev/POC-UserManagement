@@ -1,0 +1,88 @@
+{
+    "users": [
+        {
+            "id": "w2s001",
+            "name": "Bell",
+            "userName": "bell",
+            "role": "manager",
+            "address": "1st st, Chennai",
+            "mobile": "+91 9999999999",
+            "email": "bell@w2s.com",
+            "password": "1234",
+            "skillSet": [
+            ]
+        },
+        {
+            "id": "w2s002",
+            "name": "Thirumani",
+            "userName": "thiru",
+            "role": "employee",
+            "address": "2nd st, Chennai",
+            "mobile": "+91 9999999998",
+            "email": "thiru@w2s.com",
+            "password": "1234",
+            "skillSet": [
+                {
+                    "skillName": "Angular",
+                    "rating": 5
+                },
+                {
+                    "skillName": "CSS",
+                    "rating": 4
+                },
+                {
+                    "skillName": "JS",
+                    "rating": 3
+                }
+            ]
+        },
+        {
+            "id": "w2s003",
+            "name": "Sheena",
+            "userName": "sheena",
+            "role": "employee",
+            "address": "3rd st, Chennai",
+            "mobile": "+91 9999999997",
+            "email": "sheena@w2s.com",
+            "password": "1234",
+            "skillSet": [
+                {
+                    "skillName": "Angular",
+                    "rating": 4
+                },
+                {
+                    "skillName": "CSS",
+                    "rating": 3
+                },
+                {
+                    "skillName": "JS",
+                    "rating": 2
+                }
+            ]
+        },
+        {
+            "id": "w2s004",
+            "name": "Tom",
+            "userName": "tom",
+            "role": "employee",
+            "address": "4th st, Chennai",
+            "mobile": "+91 9999999996",
+            "email": "tom@w2s.com",
+            "password": "1234",
+            "skillSet": [
+                {
+                    "skillName": "C#",
+                    "rating": 5
+                },
+                {
+                    "skillName": "Asp.Net",
+                    "rating": 3
+                },
+                {
+                    "skillName": "JS",
+                    "rating": 1
+                }
+            ]
+        }
+    ]
+}

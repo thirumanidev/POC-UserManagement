@@ -1,0 +1,40 @@
+<div class="container rounded bg-white mt-5 mb-5">
+    <form id="form" [formGroup]="form" (ngSubmit)="save()"> 
+        <div class="row">
+            <div class="col-md-3 border-right">
+                <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"><span class="font-weight-bold">{{user?.name}}</span><span class="text-black-50">{{user?.email}}</span><span> </span></div>
+            </div>
+            <div class="col-md-5 border-right">
+                <div class="p-3 py-5">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h4 class="text-right">Profile Settings</h4>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-md-6"><label class="labels">Name</label><input type="text" class="form-control" formControlName="fullName" placeholder="Name" value="{{user?.name}}"></div>
+                        <div class="col-md-6"><label class="labels">User Name</label><input type="text" class="form-control" formControlName="userName" value="{{user?.userName}}" placeholder="surname"></div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-md-12"><label class="labels">Mobile Number</label><input type="text" class="form-control" formControlName="mobile" placeholder="enter phone number" value="{{user?.mobile}}"></div>
+                        <div class="col-md-12"><label class="labels">Address</label><input type="text" class="form-control" formControlName="address" placeholder="enter address" value="{{user?.address}}"></div>
+                        <div class="col-md-12"><label class="labels">Email ID</label><input type="text" class="form-control" formControlName="email" placeholder="enter email id" value="{{user?.email}}"></div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Skill" aria-label="Skill" #addSkillInput aria-describedby="button-addon2">
+                            <button class="btn btn-outline-secondary" (click)="addSkill(addSkillInput)" type="button" id="button-addon2">Add</button>
+                        </div>
+                        <ng-container formArrayName="skills">
+                            <div *ngFor="let skill of skills.controls; let i = index">
+                            <input [formControlName]="i">
+                            
+                            <span (click)="removeSkill(i)"><span class="material-icons" style="cursor: pointer;">delete</span></span>
+                            <p *ngIf="skills.controls[i].hasError('required')">Required!!</p>
+                            </div>
+                        </ng-container>
+                    </div>
+                    <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Save</button></div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
